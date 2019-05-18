@@ -1,0 +1,33 @@
+Needed actions
+ - append all images to the DOM
+    - do this using clone method
+ - on document ready
+    - event hanlders so that page reaady to run
+    -global variables
+- need sortable function for page
+
+first: do what I can do - I can make things go to the DOM, I can make a modal appear when clicked (later on make it contain the right content and disappear when needed)
+I can make things sortable.
+
+first: solve the problem
+Then: code
+
+
+Coding:
+- determine what actions we'll need; 
+- determine scope of parts and functions
+- determing what functino calls what, and passes through which variables
+
+
+Parts to the problem:
+1. Put images on DOM
+2. Make a modal appear on clicking
+
+3. make them sortable on drag
+4. save this into an array and a variable to be saved until the next time;
+    jquery .empty.action    
+
+1. need 
+    html script tag and model
+    all same class or id
+    variable to 
