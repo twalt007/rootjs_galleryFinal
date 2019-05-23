@@ -77,22 +77,15 @@ function addModalCloseHandler(){
 function displayImage(){
 	//find the url of the image by grabbing the background-image source, store it in a variable
 	//grab the direct url of the image by getting rid of the other pieces you don't need
-	console.log("testing");
 	var fullUrl = $(this).css('background-image');
-	console.log("testing getting url", fullUrl);
-	//why do I need to store this in a separate variable?  why can't  keep using teh same variable and manipulating it?  what is better practice?
-	var image = fullUrl.slice(34);
-	console.log('testing getting just content', image);
+	var image = fullUrl.slice((fullUrl.lastIndexOf('/')-6),(fullUrl.lastIndexOf('"')));
+	var title = fullUrl.slice((fullUrl.lastIndexOf('/')+1),(fullUrl.lastIndexOf('.')));
 	//grab the name from the file url, ie the part without the path.  so "images/pexels-photo-132037.jpeg" would become
 		// pexels-photo-132037
 		//take a look at the lastIndexOf method
-	var cutPoint = image.lastIndexOf('.');
-	console.log("indexNumber: ", cutPoint);
-	var imgName = image.slice(0,cutPoint);
-	console.log("NameOnly", imgName);
-	$('.modal-title').text(imgName);
-	$('.modal-body img').attr("src","images/"+imgName+".jpg");
-	$('#galleryModal').modal('show');
+	$('.modal-title').text(title);
+	$('img').attr("src",image);
+	$('#galleryModal').modal();
 
 
 	//show the modal with JS.  Check for more info here: 
